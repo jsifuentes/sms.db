@@ -1,0 +1,40 @@
+.ios7 {
+	width: 320px !important;
+	height: 568px !important;
+	margin: 20px auto !important;
+	border: 1px solid #b4b4b4;
+}
+section {
+	position: static !important;
+	width: inherit !important;
+	height: inherit !important;
+}
+.messages {
+	overflow: auto;
+	margin: 6px 8px;
+
+}
+.message-row {
+	margin: 6px 0;
+}
+
+.message {
+	overflow: auto;
+}
+
+.message .from-me {
+	float: right;
+	background:#269afd;
+	max-width: 210px;
+	color: #fff;
+	padding: 12px;
+	border-radius: 20px;
+}
+.message .from-them {
+	float: left;
+	background: #e6e5ea;
+	max-width: 210px;
+	color: #000;
+	padding: 12px;
+	border-radius: 20px;
+}

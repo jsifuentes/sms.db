@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="apple-mobile-web-app-title" content="My App">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<title>iPhone SMS Viewer</title>
+		<link rel="stylesheet" href="/vendor/Project-Tyson/css/style.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="/assets/css/reader.css">
+		<script defer src="/vendor/Project-Tyson/js/fastclick.js"></script>
+		<script defer src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script defer src="/assets/js/reader.js"></script>
+		<script defer src="/assets/js/app.js"></script>
+		<script defer src="/assets/js/sql.js"></script>
+	</head>
+	<body class="ios7">
+		<section id="first-view" class="active">
+			<header>
+				<button class="left" data-vin="view-about" data-sd="popin">
+					<div class="label">About</div>
+				</button>
+				<h1>sms.db</h1>
+			</header>
+			<div class="scrollMask"></div>
+			<div class="scrollWrap">
+				<div class="scroll">
+					<div class="content">
+						<input type="file" id="smsFile" />
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="view-home" class="hidden">
+			<header>
+				<button class="left" data-vin="view-about" data-sd="popin">
+					<div class="label">About</div>
+				</button>
+				<h1>Messages</h1>
+			</header>
+			<div class="scrollMask"></div>
+			<div class="scrollWrap">
+				<div class="scroll">
+					<div class="content">
+						<ul class="arrowed" id="handles">
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="hidden" id="view-message-chain">
+			<header>
+				<button class="left arrow tab-switcher" data-vin="view-home" data-sd="sr">
+					<div class="label">Back</div>
+				</button>
+				<h1 id="phone-number-header">Your Name Here</h1>
+			</header>
+			<div class="scrollMask"></div>
+			<div class="scrollWrap">
+				<div class="scroll">
+				<div class="content">
+					<div class="messages" id="sms-messages">
+						
+					</div>
+				</div>
+			</div>
+			</div>
+		</section>
+		<section class="hidden" id="view-about">
+			<div class="scrollMask"></div>
+			<div class="scrollWrap">
+				<div class="scroll">
+				<div class="content">
+					<h2>iPhone SMS Reader</h2>
+					<p>Read iPhone SMS messages using the sms.db file.</p>
+					<p>UI design taken fom <a href="https://github.com/c2prods/Project-Tyson">Project Tyson by c2prods</a> on Github.</p>
+					<Hr />
+					<p>This code is on Github! <a href="https://github.com/jsifuentes/iPhone-SMS-Viewer">https://github.com/jsifuentes/iPhone-SMS-Viewer</a></p>
+				</div>
+			</div>
+			</div>
+		</section>
+	</body>
+</html>
