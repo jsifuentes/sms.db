@@ -38,3 +38,6 @@ section {
 	padding: 12px;
 	border-radius: 20px;
 }
+#about-content p {
+	font-size:13px;
+}
