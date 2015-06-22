@@ -1,2 +1,2 @@
-# iPhone-SMS-Viewer
-View iPhone SMS messages using the sms.db file in your web browser.
+# sms.db
+Read the sms.db file on iPhones in your web browser
