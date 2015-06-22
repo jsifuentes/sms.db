@@ -93,13 +93,14 @@ var App = {
             };
         vOut.bind('webkitAnimationEnd', onAnimationEnd, false);
         vOut.bind('animationend', onAnimationEnd);
-        if (callback && typeof(callback) === 'function') {
-            callback();
-        }
         vOut.removeClass('active');
         vIn.removeClass('hidden');
         vIn.addClass(slideOpts[slideType][0]);
         vOut.addClass(slideOpts[slideType][1]);
+        
+        if (callback && typeof(callback) === 'function') {
+            callback();
+        }
     }
 }
 

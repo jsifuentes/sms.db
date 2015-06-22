@@ -21,7 +21,7 @@ var reader = {
 			"LEFT JOIN message_attachment_join ON message.ROWID = message_id " + 
 			"LEFT JOIN attachment ON attachment.ROWID = attachment_id " +
 			"WHERE `message`.`handle_id` = '" + handle_id + "' " + 
-			"ORDER BY `message`.`ROWID` DESC");
+			"ORDER BY `message`.`ROWID` ASC");
 		var sms = smsExec[0];
 
 		return sms;
@@ -44,7 +44,7 @@ smsFilesElement.onchange = function() {
 		for (var i = 0; i < handlesResult.values.length; i++) {
 			var handle = handlesResult.values[i];
 
-			buffer += '<li class="tab-switcher" data-vin="view-message-chain" data-sd="sl" data-handle-id="' + handle[0] + '">' + 
+			buffer += '<li data-handle-id="' + handle[0] + '">' + 
 				'<div class="innerLi">' + 
 					'<div class="big">' + handle[1] + ' </div>' + 
 					'<div class="light">' + handle[2] + ' messages</div>' + 
@@ -88,4 +88,9 @@ $('ul#handles').on('click', 'li', function() {
 	}
 
 	smsDOM.append(buffer);
+
+	App.switchTab("view-message-chain", "sl", function() {
+		var messageScroll = $("#view-message-chain .scroll");
+		messageScroll.scrollTop(messageScroll[0].scrollHeight);
+	});
 });
