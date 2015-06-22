@@ -17,7 +17,7 @@
 	<body class="ios7">
 		<section id="first-view" class="active">
 			<header>
-				<button class="left" data-vin="view-about" data-sd="popin">
+				<button class="left tab-switcher" data-vin="view-about" data-sd="sl">
 					<div class="label">About</div>
 				</button>
 				<h1>sms.db</h1>
@@ -34,7 +34,7 @@
 
 		<section id="view-home" class="hidden">
 			<header>
-				<button class="left" data-vin="view-about" data-sd="popin">
+				<button class="left tab-switcher" data-vin="view-about" data-sd="sl">
 					<div class="label">About</div>
 				</button>
 				<h1>Messages</h1>
@@ -69,6 +69,12 @@
 			</div>
 		</section>
 		<section class="hidden" id="view-about">
+			<header>
+				<button class="left arrow tab-switcher" data-vin="first-view" data-sd="sr" id="about-back">
+					<div class="label">Back</div>
+				</button>
+				<h1>About</h1>
+			</header>
 			<div class="scrollMask"></div>
 			<div class="scrollWrap">
 				<div class="scroll">

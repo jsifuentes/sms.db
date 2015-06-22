@@ -56,7 +56,8 @@ smsFilesElement.onchange = function() {
     }
     r.readAsArrayBuffer(f);
 
-    App.switchTab("view-home", "popin");
+    App.switchTab("view-home", "sl");
+    $("#about-back").data('vin', "view-home");
 };
 
 var htmlEntities = function(str) {
